@@ -166,8 +166,7 @@ html_scanner = {
         var nameLiteral = JSON.stringify(name);
         var templateDotNameLiteral = JSON.stringify("Template." + name);
 
-        results.js += "\nTemplate.__checkName(" + nameLiteral + ");\n" +
-          "Template[" + nameLiteral + "] = new Template(" +
+        results.js += "\nTemplate[" + nameLiteral + "] = new Template(" +
           templateDotNameLiteral + ", " + renderFuncCode + ");\n";
       } else {
         // <body>
